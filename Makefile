@@ -54,6 +54,9 @@ docker-build: build
 docker-run: docker-build
 	docker run --network host -p 8080:8080 $(DOCKER_IMAGE)
 
+.PHONY: docker-mongodb
+docker-mongodb:
+	docker run -d --name mongodb  -p 27017:27017  -v /tmp/mongodb:/data/db  mongo
 
 ##@ Run
 .PHONY: run
