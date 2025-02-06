@@ -1,0 +1,9 @@
+---
+spring:
+  application:
+    name: "migration-backend"
+  data:
+    mongodb:
+      database: "test"
+      host: "localhost"
+      port: 27017
